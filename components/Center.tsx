@@ -3,15 +3,20 @@ import Image from "next/image";
 import {FC} from "react";
 
 type Props = {
-    title : String
+    Comp: React.FC
+    array: Array<Number>
+    canShow: Boolean
+    onClick: () => void
+    title: String
 }
-export const Center: FC<Props> = ({title}) => {
+export const Center: FC<Props> = ({title, array, canShow, Comp,onClick}) => {
+
+
     return (
         <div>
             <div className={styles.description}>
-                <p>
-                    {title}ページですよ！！！！
-                </p>
+                {canShow && <p>{title}ページですよ{array.length}</p>}
+                <Comp/>
                 <div>
                     <a
                         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -30,6 +35,8 @@ export const Center: FC<Props> = ({title}) => {
                     </a>
                 </div>
             </div>
+
+            <button onClick={onClick}>こんにちわ</button>
 
             <div className={styles.center}>
                 <Image

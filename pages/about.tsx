@@ -18,7 +18,8 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={styles.main}>
-                <Center title = "Aboutだよ！！"/>
+                <Center title="Aboutだよ！！" array={[3, 4, 5]} canShow={true} Comp={() => <p>なると</p>}
+                        onClick={() => alert("クリック")}/>
                 <Links/>
                 <Fotter/>
 
