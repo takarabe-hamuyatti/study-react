@@ -1,13 +1,16 @@
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
+import {FC} from "react";
 
-
-export function Center() {
+type Props = {
+    title : String
+}
+export const Center: FC<Props> = ({title}) => {
     return (
-        <>
+        <div>
             <div className={styles.description}>
                 <p>
-                    Indexページですよ！！！！
+                    {title}ページですよ！！！！
                 </p>
                 <div>
                     <a
@@ -38,6 +41,6 @@ export function Center() {
                     priority
                 />
             </div>
-        </>
+        </div>
     )
 }
