@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import {Fotter} from "@/components/Fotter";
 import {Links} from "@/components/Links";
 import {Center} from "@/components/Center";
+import {TransitionButton} from "@/components/TransitionButton";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -17,7 +18,10 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
+
             <main className={styles.main}>
+                <TransitionButton />
+
                 <Center title="Aboutだよ！！" array={[3, 4, 5]} canShow={true} Comp={() => <p>なると</p>}
                         onClick={() => alert("クリック")}/>
                 <Links/>
